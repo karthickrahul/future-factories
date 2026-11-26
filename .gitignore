@@ -1,0 +1,10 @@
+# Python environment - rebuild with: pip install -r requirements.txt
+future-Manufacturing.venv/
+.venv/
+
+# Temporary cache files (recreated automatically when the notebook runs)
+outputs/_cache_*.pkl
+
+# Python/Jupyter temporary files
+__pycache__/
+.ipynb_checkpoints/
