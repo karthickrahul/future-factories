@@ -18,8 +18,19 @@ The 21 cycle states are not documented in the dataset – which robot works in w
 ![Time per state](outputs/fig3_state_pareto.png)
 ![Slow-cycle losses](outputs/fig4_slow_cycle_losses.png)
 
+## Key findings (Phase 2 – SPC)
+- The undisturbed cell is **extremely repeatable**: short-term sigma of cycle time is only **0.37 s**. Against an assumed 300 s target, **Cpk = 4.15**.
+- Yet **18 of 92 cycles (20 %) exceed 300 s** – the losses come from **special causes** (disturbances), not normal variation.
+- **S09 (conveyor/wait) drifted** about 1–1.5 s slower from cycle ~55 to 84, then stepped back below its centre line from cycle 85.
+- Recommendation: remove disturbances rather than reduce normal variation.
+
+*The dataset has no spec limits – the 300 s target is an assumption.*
+
+![I-MR cycle time](outputs/fig5_imr_cycle_time.png)
+![I-MR S09](outputs/fig7_imr_s09.png)
 ## Project structure
 ```
+
 data/                 raw analog sensor data (7 files)
 notebooks/            analysis notebooks
 outputs/              charts and the state-time table (Excel)
@@ -38,7 +49,7 @@ Update `DATA_DIR` and `OUT_DIR` in the first cell to your folder paths.
 
 ## Roadmap
 - [x] Phase 1 – Cycle-time study (state-time table, bottlenecks, slow-cycle analysis)
-- [ ] Phase 2 – SPC: I-MR control charts and process capability
+- [x] Phase 2 – SPC: I-MR control charts and process capability
 - [ ] Phase 3 – Anomaly detection (sensor fault, missing-part images)
 - [ ] Phase 4 – Improvement scenarios with discrete-event simulation
 
